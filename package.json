@@ -1,0 +1,17 @@
+{
+  "name": "querytile-extended",
+  "version": "2.0.0",
+  "description": "Query Tile Widget with aggregation functions: sum, highest, lowest, average, count of empty or non empty values, on all integer or decimal values of your WI, with rounding and multiplication factor.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Aurelien Sudre",
+  "license": "MIT",
+  "dependencies": {
+    "vss-web-extension-sdk": "^5.0.0"
+  },
+  "devDependencies": {
+    "chart.js": "^3.9.1"
+  }
+}

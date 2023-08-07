@@ -154,11 +154,11 @@
       "addressable": true
     },
     {
-      "path": "bower_components/vss-web-extension-sdk/lib/VSS.SDK.min.js",
+      "path": "node_modules/vss-web-extension-sdk/lib/VSS.SDK.min.js",
       "addressable": true
     },
     {
-      "path": "bower_components/chart.js/dist/Chart.min.js",
+      "path": "node_modules/chart.js/dist/Chart.min.js",
       "addressable": true
     }
   ],
