@@ -1,13 +1,13 @@
 {
   "manifestVersion": 1,
-  "id": "querytile-extended",
-  "version": "2.0.0",
-  "name": "Query Tile Extended",
+  "id": "querytile-extended-beta",
+  "version": "2.1.12",
+  "name": "Query Tile Extended - Beta",
   "description": "Query Tile Widget with aggregation functions: sum, highest, lowest, average, count of empty or non empty values, on all integer or decimal values of your WI, with rounding and multiplication factor.",
   "publisher": "aurelien-sudre",
   "scopes": ["vso.work"],
   "galleryFlags": ["Public"],
-  "categories": ["Collaborate", "Azure Boards"],
+  "categories": ["Azure Boards"],
   "tags": [
     "dashboard",
     "widget",
@@ -87,7 +87,7 @@
       "properties": {
         "name": "Query Tile Extended Configuration",
         "description": "Query Tile Widget with aggregation functions: sum, highest, lowest, average, count of empty or non empty values, on all integer or decimal values of your WI, with rounding and multiplication factor.",
-        "uri": "configuration.html"
+        "uri": "widgets/bigcount/configuration.html"
       }
     },
     {
@@ -124,17 +124,25 @@
       "properties": {
         "name": "Query Tile Extended Configuration",
         "description": "Query Tile Widget with aggregation functions: sum, highest, lowest, average, count of empty or non empty values, on all integer or decimal values of your WI, with rounding and multiplication factor.",
-        "uri": "configuration.html"
+        "uri": "widgets/graph/configuration.html"
       }
     }
   ],
   "files": [
     {
-      "path": "widgets/bigcount",
+      "path": "widgets/bigcount/widget.html",
       "addressable": true
     },
     {
-      "path": "widgets/graph",
+      "path": "widgets/bigcount/configuration.html",
+      "addressable": true
+    },
+    {
+      "path": "widgets/graph/widget.html",
+      "addressable": true
+    },
+    {
+      "path": "widgets/graph/configuration.html",
       "addressable": true
     },
     {

@@ -1,6 +1,6 @@
 # QueryTile Extended
 
-![Widget preview](images/preview.png)
+![Widget preview](shared/images/preview.png)
 
 **Widget** for TFS and VSTS allowing to mimic the *QueryTile* widget with aggregation function :
 - Sum
@@ -13,7 +13,7 @@
 ## HowTo
 First look at the configuration :
 
-![Configuration preview](images/preview_config.png)
+![Configuration preview](shared/images/preview_config.png)
 
 First choose a name for your widget, and a size (currently 1x1 or 2x1).
 

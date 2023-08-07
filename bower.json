@@ -1,19 +1,16 @@
 {
   "name": "widgets",
-  "homepage": "https://github.com/Microsoft/vso-extension-samples",
+  "version": "2.0.0",
+  "authors": ["Aurelien Sudre"],
   "description": "",
   "main": "",
-  "moduleType": [],
   "license": "MIT",
+  "homepage": "https://github.com/arsenikstiger/querytile-extended",
+  "moduleType": [],
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
   "dependencies": {
-    "vss-web-extension-sdk": "^1.95.2"
+    "vss-web-extension-sdk": "^1.95.2",
+    "chart.js": "2.9.4"
   }
 }
