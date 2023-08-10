@@ -1,6 +1,6 @@
 Query Tile Extended
 
-Copyright (c) Aurélien Sudre
+Copyright (c) Aurélien Sudre - 2023
 
 All rights reserved.
 

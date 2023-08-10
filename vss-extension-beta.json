@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
   "id": "querytile-extended-beta",
-  "version": "2.1.12",
+  "version": "2.1.48",
   "name": "Query Tile Extended - Beta",
-  "description": "Query Tile Widget with aggregation functions: sum, highest, lowest, average, count of empty or non empty values, on all integer or decimal values of your WI, with rounding and multiplication factor.",
+  "description": "Query Tile Extended, a widget with group by and aggregation functions, and multiple visualizations, like big number, or charts like bar, line, pie, donut, polar and radar",
   "publisher": "aurelien-sudre",
   "scopes": ["vso.work"],
   "galleryFlags": ["Public"],
@@ -20,8 +20,14 @@
     "days",
     "point",
     "bigcount",
-    "graph",
-    "progress"
+    "chart",
+    "bar",
+    "line",
+    "pie",
+    "doughnut",
+    "donut",
+    "polar",
+    "radar"
   ],
   "links": {
     "getstarted": {
@@ -61,11 +67,11 @@
         ".querytile-extended-widget-configuration"
       ],
       "properties": {
-        "name": "Query Tile Extended",
-        "description": "Query Tile Widget with aggregation functions: sum, highest, lowest, average, count of empty or non empty values, on all integer or decimal values of your WI, with rounding and multiplication factor.",
+        "name": "Query Tile Extended Widget",
+        "description": "Query Tile Extended, a widget with group by and aggregation functions, and multiple visualizations, like big number, or charts like bar, line, pie, donut, polar and radar",
         "catalogIconUrl:": "shared/images/logo.png",
         "previewImageUrl": "shared/images/logo.png",
-        "uri": "widgets/bigcount/widget.html",
+        "uri": "widgets/widget.html",
         "isNameConfigurable": true,
         "supportedSizes": [
           {
@@ -75,6 +81,62 @@
           {
             "rowSpan": 1,
             "columnSpan": 2
+          },
+          {
+            "rowSpan": 1,
+            "columnSpan": 3
+          },
+          {
+            "rowSpan": 1,
+            "columnSpan": 4
+          },
+          {
+            "rowSpan": 2,
+            "columnSpan": 1
+          },
+          {
+            "rowSpan": 2,
+            "columnSpan": 2
+          },
+          {
+            "rowSpan": 2,
+            "columnSpan": 3
+          },
+          {
+            "rowSpan": 2,
+            "columnSpan": 4
+          },
+          {
+            "rowSpan": 3,
+            "columnSpan": 1
+          },
+          {
+            "rowSpan": 3,
+            "columnSpan": 2
+          },
+          {
+            "rowSpan": 3,
+            "columnSpan": 3
+          },
+          {
+            "rowSpan": 3,
+            "columnSpan": 4
+          },
+          {
+            "rowSpan": 4,
+            "columnSpan": 1
+          },
+          {
+            "rowSpan": 4,
+            "columnSpan": 2
+          },
+          {
+            "rowSpan": 4,
+            "columnSpan": 3
+          },
+          {
+            "rowSpan": 4,
+            "columnSpan": 4
           }
         ],
         "supportedScopes": ["project_team"]
@@ -87,62 +149,17 @@
       "properties": {
         "name": "Query Tile Extended Configuration",
         "description": "Query Tile Widget with aggregation functions: sum, highest, lowest, average, count of empty or non empty values, on all integer or decimal values of your WI, with rounding and multiplication factor.",
-        "uri": "widgets/bigcount/configuration.html"
-      }
-    },
-    {
-      "id": "querytile-extended-widget-graph",
-      "type": "ms.vss-dashboards-web.widget",
-      "targets": [
-        "ms.vss-dashboards-web.widget-catalog",
-        ".querytile-extended-widget-graph-configuration"
-      ],
-      "properties": {
-        "name": "Query Tile Extended - Graph",
-        "description": "Query Tile Widget Graph with aggregation functions: sum, highest, lowest, average, count of empty or non empty values, on all integer or decimal values of your WI, with rounding and multiplication factor.",
-        "catalogIconUrl:": "shared/images/logo.png",
-        "previewImageUrl": "shared/images/logo.png",
-        "uri": "widgets/graph/widget.html",
-        "isNameConfigurable": true,
-        "supportedSizes": [
-          {
-            "rowSpan": 1,
-            "columnSpan": 1
-          },
-          {
-            "rowSpan": 2,
-            "columnSpan": 2
-          }
-        ],
-        "supportedScopes": ["project_team"]
-      }
-    },
-    {
-      "id": "querytile-extended-widget-graph-configuration",
-      "type": "ms.vss-dashboards-web.widget-configuration",
-      "targets": ["ms.vss-dashboards-web.widget-configuration"],
-      "properties": {
-        "name": "Query Tile Extended Configuration",
-        "description": "Query Tile Widget with aggregation functions: sum, highest, lowest, average, count of empty or non empty values, on all integer or decimal values of your WI, with rounding and multiplication factor.",
-        "uri": "widgets/graph/configuration.html"
+        "uri": "widgets/configuration.html"
       }
     }
   ],
   "files": [
     {
-      "path": "widgets/bigcount/widget.html",
+      "path": "widgets/widget.html",
       "addressable": true
     },
     {
-      "path": "widgets/bigcount/configuration.html",
-      "addressable": true
-    },
-    {
-      "path": "widgets/graph/widget.html",
-      "addressable": true
-    },
-    {
-      "path": "widgets/graph/configuration.html",
+      "path": "widgets/configuration.html",
       "addressable": true
     },
     {
@@ -150,7 +167,7 @@
       "addressable": true
     },
     {
-      "path": "shared/scripts/array-polyfill.js",
+      "path": "shared/styles",
       "addressable": true
     },
     {
@@ -158,7 +175,11 @@
       "addressable": true
     },
     {
-      "path": "node_modules/chart.js/dist/Chart.min.js",
+      "path": "node_modules/chart.js/dist/chart.umd.js",
+      "addressable": true
+    },
+    {
+      "path": "node_modules/chartjs-plugin-autocolors/dist/chartjs-plugin-autocolors.min.js",
       "addressable": true
     }
   ],

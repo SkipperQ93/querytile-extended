@@ -10,3 +10,6 @@ extension-*.json
 
 #npm log
 npm-debug.log
+
+# General
+.DS_Store

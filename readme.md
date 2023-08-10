@@ -2,46 +2,60 @@
 
 ![Widget preview](shared/images/preview.png)
 
-**Widget** for TFS and VSTS allowing to mimic the *QueryTile* widget with aggregation function :
+**Widget** for TFS and VSTS allowing to mimic the *QueryTile* widget with various types of visualizations and enhanced customization. Now, you can display your data in different visualization formats including:
+
+- Number
+- Bar
+- Line
+- Pie
+- Donut
+- Polar
+- Radar
+
+You can also choose the colors for the charts and group the data as needed. The available aggregation functions include:
+
 - Sum
 - Highest
 - Lowest
 - Average
 - Count empty values
-- Count non empty values
+- Count non-empty values
 
 ## HowTo
-First look at the configuration :
+
+First, take a look at the configuration:
 
 ![Configuration preview](shared/images/preview_config.png)
 
-First choose a name for your widget, and a size (currently 1x1 or 2x1).
+Start by choosing a name for your widget, and a size (from 1x1 to 4x4).
 
-Then choose a public query with the Query dropdown.
+Then select a public query with the Query dropdown.
 
-When done, it is the moment to choose the field on which you want to apply an aggregation function.
+Next, choose the type of visualization you want to use (number, bar, line, pie, donut, polar, or radar).
 
-The field dropdown present you all integer or decimal field configured on your project, even if the chosen query doesn't returns it.
+You can then select the field on which you want to apply an aggregation function. The field dropdown presents you with all integer or decimal fields configured on your project, even if the chosen query doesn't return them.
 
-You can then choose to apply some multiplication or division factor (for days to hour conversion for example).
+You can also choose the colors for the charts and decide how to group the data.
 
-By applying some aggregation functions or division factor, you risk to have some decimal value, not really cool to present on a dashboard, that's why you can apply some rounding.
+If needed, you can apply some multiplication or division factors (for days to hour conversion, for example).
 
-You can then round the result obtained, and apply a multiplication or division factor on it.
+By applying certain aggregation functions or division factors, you may end up with decimal values. To make the presentation cleaner, you can apply rounding.
 
-Finally you can set the unit of the aggregation result you will show, and the background color of the widget.
+Finally, you can set the unit of the aggregation result you will show, and the background color of the widget.
 
 ## Browser compatibility
+
 The widget is working on :
-- Firefox
+
+- Arc Browser ❤️
 - Chrome
+- Firefox
 - Edge
-- Internet Explorer
 
-Let me know if it is compatible or not on other browser.
+## Evolutions
 
-## Evolution
-If you have some ideas for this widget to evolve, don't be shy and contact me on [github](https://github.com/arsenikstiger/querytile-extended).
+If you have ideas for this widget to evolve, including new visualization types or other enhancements, don't be shy and contact me on [github](https://github.com/arsenikstiger/querytile-extended).
 
 ## License
+
 The [code](https://github.com/arsenikstiger/querytile-extended) is open sourced under the [MIT license](license.md). We love and encourage community contributions.
