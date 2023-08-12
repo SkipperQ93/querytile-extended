@@ -14,11 +14,11 @@
         usePlatformStyles: true,
       });
 
-      let logError = function (message) {
+      const logError = (message) => {
         console.error("[ERROR]", message);
       };
 
-      let logInfo = function (message) {
+      const logInfo = (message) => {
         console.info("[INFO]", message);
       };
 
@@ -324,6 +324,8 @@
                       };
 
                       const calculateAndShowBigCount = (workItems) => {
+                        document.getElementById("widget-nodata").style.display =
+                          "none";
                         document.getElementById(
                           "widget-bigcount"
                         ).style.display = "flex";
@@ -341,6 +343,8 @@
                       };
 
                       const calculateAndShowChart = (workItems) => {
+                        document.getElementById("widget-nodata").style.display =
+                          "none";
                         document.getElementById(
                           "widget-bigcount"
                         ).style.display = "none";
@@ -473,6 +477,15 @@
                         }
                       } catch (error) {
                         logError(error);
+
+                        document.getElementById("widget-nodata").style.display =
+                          "flex";
+                        document.getElementById(
+                          "widget-bigcount"
+                        ).style.display = "none";
+                        document.getElementById("widget-chart").style.display =
+                          "none";
+
                         // Use the widget helper and return failure as Widget Status
                         return WidgetHelpers.WidgetStatusHelper.Failure(
                           error.message
@@ -499,9 +512,18 @@
                 settings = JSON.parse(widgetSettings.customSettings.data);
               }
 
-              // Sets default visualizationType
-              if (!settings || !settings.visualizationType) {
-                settings.visualizationType = "bigcount";
+              // Upgrade settings to v1
+              if (!settings._version) {
+                try {
+                  logInfo("Update settings to v1");
+                  settings._version = "1";
+                  settings.visualizationType = "bigcount";
+                  settings.pivotName = "System.State";
+                  settings.chartColorScheme = "random";
+                  widgetSettings.customSettings.data = JSON.stringify(settings);
+                } catch (error) {
+                  logError(error);
+                }
               }
 
               // Sets default rounding
@@ -542,6 +564,7 @@
               // Returns a message if some mandatory values are not present
               if (
                 !settings ||
+                !settings.visualizationType ||
                 !settings.queryId ||
                 !settings.fieldName ||
                 !settings.aggregationType
@@ -580,6 +603,9 @@
           <h2 id="widget-title" class="title truncated-text-ellipsis">
             Widget
           </h2>
+          <div id="widget-nodata" class="big-count truncated-text-ellipsis">
+            -
+          </div>
           <div id="widget-bigcount" class="big-count truncated-text-ellipsis">
             223
           </div>

@@ -7,20 +7,20 @@
     <script src="../node_modules/vss-web-extension-sdk/lib/VSS.SDK.min.js"></script>
     <link rel="stylesheet" href="../shared/styles/configuration.css" />
     <script type="text/javascript">
+      const logError = (message) => {
+        console.error("[ERROR]", message);
+      };
+
       VSS.init({
         explicitNotifyLoaded: true,
         usePlatformStyles: true,
       });
 
-      var logError = function (message) {
-        console.error("[ERROR]", message);
-      };
-
       //Init
-      var settings;
+      let settings;
 
-      var queryOps = 0;
-      var queriesSource = [];
+      let queryOps = 0;
+      let queriesSource = [];
 
       VSS.require(
         [
@@ -46,7 +46,7 @@
 
           //Registers functions for the specified widget
           VSS.register("querytile-extended-widget-configuration", function () {
-            var closeQueryOps = function () {
+            const closeQueryOps = () => {
               queryOps -= 1;
 
               if (queryOps > 0) return;
@@ -69,7 +69,7 @@
               $queryDropdown.prop("disabled", false);
             };
 
-            const startQueryOps = function () {
+            const startQueryOps = () => {
               queryOps += 1;
             };
 
@@ -112,7 +112,7 @@
                       childQuery = iterateThroughQuery(childQuery);
                     });
 
-                    closeQueryOps();
+                    closeQueryOps(settings);
 
                     return updatedQuery;
                   });
@@ -171,7 +171,7 @@
                     queriesSource = queries;
                     iterateThroughQueriesTree(queriesSource);
 
-                    closeQueryOps();
+                    closeQueryOps(settings);
 
                     // Use the widget helper and return success as Widget Status
                     return WidgetHelpers.WidgetStatusHelper.Success();
@@ -286,6 +286,7 @@
             const collectSettings = function () {
               var customSettings = {
                 data: JSON.stringify({
+                  _version: "1",
                   visualizationType: $visualizationDropdown.val(),
                   queryId: $queryDropdown.val(),
                   pivotName: $pivotDropdown.val(),
