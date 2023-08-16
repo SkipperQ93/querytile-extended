@@ -102,8 +102,12 @@
                     }
 
                     let fields = [];
-                    fields.push(settings.pivotName);
-                    fields.push(settings.fieldName);
+                    if (settings && settings.pivotName) {
+                      fields.push(settings.pivotName);
+                    }
+                    if (settings && settings.fieldName) {
+                      fields.push(settings.fieldName);
+                    }
 
                     let promises = [];
                     let workItemIdsBatch = [];
