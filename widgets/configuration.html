@@ -324,7 +324,13 @@
 
                 console.log(JSON.stringify(_settings));
 
-                if (visualizations.includes(_settings.visualizationType)) {
+                let visualizationType = "bigcount";
+
+                if (_settings && _settings.visualizationType) {
+                  visualizationType = settings.visualizationType;
+                }
+
+                if (visualizations.includes(visualizationType)) {
                   fieldset.style.display = "block";
                 } else {
                   fieldset.style.display = "none";
