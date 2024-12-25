@@ -4,8 +4,8 @@
   "description": "Query Tile Widget with aggregation functions: sum, highest, lowest, average, count of empty or non empty values, on all integer or decimal values of your WI, with rounding and multiplication factor.",
   "main": "index.js",
   "scripts": {
-    "build:beta": "tfx extension create --manifest-globs vss-extension-beta.json",
-    "build": "tfx extension create --manifest-globs vss-extension.json"
+    "clean": "rimraf ./dist ./out",
+    "package": "npm run clean && tfx extension create --manifest-globs vss-extension.json --output-path out"
   },
   "author": "Aurelien Sudre",
   "license": "MIT",
@@ -14,6 +14,8 @@
     "vss-web-extension-sdk": "^5.0.0"
   },
   "devDependencies": {
-    "chart.js": "^4.3.3"
+    "chart.js": "^4.3.3",
+    "rimraf": "^6.0.1",
+    "tfx-cli": "^0.17.0"
   }
 }
