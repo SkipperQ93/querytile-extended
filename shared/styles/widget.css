@@ -18,15 +18,15 @@
     url("../images/rounded_square.png");
 }
 
-.countempty {
-  background-image: url("../images/countempty.png"),
-    url("../images/rounded_square.png");
-}
+/*.countempty {*/
+/*  background-image: url("../images/countempty.png"),*/
+/*    url("../images/rounded_square.png");*/
+/*}*/
 
-.countnotempty {
-  background-image: url("../images/countnotempty.png"),
-    url("../images/rounded_square.png");
-}
+/*.countnotempty {*/
+/*  background-image: url("../images/countnotempty.png"),*/
+/*    url("../images/rounded_square.png");*/
+/*}*/
 
 .sum,
 .highest,
