@@ -76,7 +76,7 @@
                     }
 
                     let $workitems = $("#workitems");
-                    $workitems.text("");
+                    $workitems.text("-");
                     //$workitems.html(queryResultCount + " WI <BR>" + queryTypeString);
 
                     //TODO : Si aucun élément, on renvoie directement
@@ -483,10 +483,10 @@
                         logError(error);
 
                         document.getElementById("widget-nodata").style.display =
-                          "none";
+                          "flex";
                         document.getElementById(
                           "widget-bigcount"
-                        ).style.display = "flex";
+                        ).style.display = "none";
                         document.getElementById("widget-chart").style.display =
                           "none";
 
@@ -537,7 +537,7 @@
 
               // Sets default unit
               if (!settings || !settings.unit) {
-                settings.unit = "";
+                settings.unit = "-";
               }
 
               // Sets default backgroundColor
