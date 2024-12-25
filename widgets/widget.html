@@ -41,14 +41,14 @@
                 .queryById(settings.queryId, projectId)
                 .then(
                   function (queryByIdResult) {
-                    let $queryLink = $("#query-link");
-                    $queryLink.prop(
-                      "href",
-                      VSS.getWebContext().collection.uri +
-                        VSS.getWebContext().project.name +
-                        "/_workItems/resultsById/" +
-                        settings.queryId
-                    );
+                    // let $queryLink = $("#query-link");
+                    // $queryLink.prop(
+                    //   "href",
+                    //   VSS.getWebContext().collection.uri +
+                    //     VSS.getWebContext().project.name +
+                    //     "/_workItems/resultsById/" +
+                    //     settings.queryId
+                    // );
 
                     // convert queryType id to string
                     let queryTypeString = "";
@@ -602,7 +602,7 @@
 
   <body>
     <div id="widget" class="widget clickable">
-      <a id="query-link" href="" target="_parent">
+      <a id="query-link">
         <div id="widget-container" class="flex-container">
           <h2 id="widget-title" class="title truncated-text-ellipsis">
             Widget
